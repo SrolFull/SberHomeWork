@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 
 
 public class Main {
+
+
+
     private static double[] CarsCostsByType = new double[4];
     public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
@@ -101,6 +104,14 @@ public class Main {
      * @param data List of GSM strings " C(Code_Car)_state number-mileage-(additional parameter) "
      */
     private static void PrintFuelCost(List<ArrayList<String>> data){
+        final double FUEL_COST_LIGHT = 46.10;
+        final double FUEL_COST_MIDDLE = 47.50;
+        final double FUEL_COST_HEAVY = 48.90;
+        final double FUEL_CONSUMPTION_LIGHT = 12.5 ;
+        final double FUEL_CONSUMPTION_MIDDLE = 12 ;
+        final double FUEL_CONSUMPTION_HEAVY_PASSANGER = 11.5;
+        final double FUEL_CONSUMPTION_HEAVY_TYPE2 = 20 ;
+
         float TotalCost = 0;
         double cost;
         for(ArrayList<String> list : data){
@@ -109,22 +120,22 @@ public class Main {
             float fuelMultiplier = carMileage / 100;
             switch (carType){
                 case 100:
-                    cost = fuelMultiplier * 12.5 * 46.10 ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_LIGHT * FUEL_COST_LIGHT ;
                     TotalCost += cost;
                     CarsCostsByType[0] +=cost;
                     break;
                 case 200:
-                    cost = fuelMultiplier * 12.5 * 46.10 ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_MIDDLE * FUEL_COST_MIDDLE ;
                     TotalCost += cost;
                     CarsCostsByType[1] +=cost;
                     break;
                 case 300:
-                    cost = fuelMultiplier * 12.5 * 46.10 ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_HEAVY_PASSANGER * FUEL_COST_HEAVY ;
                     TotalCost += cost;
                     CarsCostsByType[2] +=cost;
                     break;
                 case 400:
-                    cost = fuelMultiplier * 12.5 * 46.10 ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_HEAVY_TYPE2 * FUEL_COST_HEAVY ;
                     TotalCost += cost;
                     CarsCostsByType[3] +=cost;
                     break;
