@@ -80,16 +80,16 @@ public class Task1Main {
      * Print info about fuel cost by type
      */
     private static void PrintMaxAndMinType(){
-     double min=CarsCostsByType[0],max=CarsCostsByType[0];
+     double min=Double.MAX_VALUE,max=CarsCostsByType[0];
      int minType=100, maxType=100;
-        for(int i=1;i<3;i++){
+        for(int i=0;i<4;i++){
          if (CarsCostsByType[i] < min) {
              min = CarsCostsByType[i];
-             minType = i*100;
+             minType = (i+1)*100;
          }
          if (CarsCostsByType[i] > max) {
              max = CarsCostsByType[i];
-            maxType = i*100;
+            maxType = (i+1)*100;
          }
      }
         System.out.println("Тип авто имеющий наибольшую стоимость расходов: " + maxType);
@@ -122,12 +122,12 @@ public class Task1Main {
                     CarsCostsByType[0] +=cost;
                     break;
                 case 200:
-                    cost = fuelMultiplier * FUEL_CONSUMPTION_MIDDLE * FUEL_COST_MIDDLE ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_MIDDLE * FUEL_COST_HEAVY ;
                     TotalCost += cost;
                     CarsCostsByType[1] +=cost;
                     break;
                 case 300:
-                    cost = fuelMultiplier * FUEL_CONSUMPTION_HEAVY_PASSANGER * FUEL_COST_HEAVY ;
+                    cost = fuelMultiplier * FUEL_CONSUMPTION_HEAVY_PASSANGER * FUEL_COST_MIDDLE ;
                     TotalCost += cost;
                     CarsCostsByType[2] +=cost;
                     break;
