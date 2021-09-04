@@ -63,8 +63,8 @@ public class Car {
     @Override
     public String toString () {
         return "Тип авто: " + carType.codeCar
-                + "Номер авто:  " + carNumber
-                + "Пробег: " + carMileage
-                + "Допольнительный пармераметр" + additionalParameter;
+                + " | Номер авто:  " + carNumber
+                + " | Пробег: " + carMileage
+                + " | Допольнительный пармераметр: " + additionalParameter;
     }
 }

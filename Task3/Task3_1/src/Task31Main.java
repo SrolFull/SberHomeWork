@@ -9,7 +9,8 @@ public class Task31Main {
         carList.sort(Comparator.comparing(Car::getCarType));
         System.out.printf("Общая стоимость расходов на ГСМ: %.2f %n%n", GSMUtility.CalcTotalFuelCost(carList));
         GSMUtility.PrintMaxAndMinConsumption(carList);
-        carList.sort(Comparator.comparing(Car::getCarMileage)
+        carList.sort(Comparator.comparing(Car::getCarType)
+                             .thenComparing(Car::getCarMileage)
                              .thenComparing(Car::getAdditionalParameter));
         carList.forEach(car -> System.out.println(car.toString()));
     }

@@ -34,7 +34,7 @@ public class GSMUtility {
             }
         }
         System.out.println("Тип авто имеющий наибольшую стоимость расходов: " + carTypeMax.codeCar);
-        System.out.println("Тип авто имеющий наименьшую стоимость расходов: " + carTypeMin.codeCar);
+        System.out.println("Тип авто имеющий наименьшую стоимость расходов: " + carTypeMin.codeCar + "\n");
     }
 
     private static double CalcFuelCost (Car car) {
