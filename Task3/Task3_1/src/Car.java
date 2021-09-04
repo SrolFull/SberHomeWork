@@ -1,4 +1,4 @@
-public class Car implements Comparable<Car> {
+public class Car {
     private CarType carType;
     private FuelConsumption fuelConsumption;
     private FuelType fuelType;
@@ -6,20 +6,24 @@ public class Car implements Comparable<Car> {
     private int carNumber;
     private double carMileage;
 
-    public Car(CarType carType, int carNumber, double carMileage ){
-        setCarParameters(carType,carNumber,carMileage);
+    public Car (CarType carType, int carNumber, double carMileage) {
+        setCarParameters(carType, carNumber, carMileage);
     }
 
-    public Car(CarType carType, int carNumber, double carMileage, int additionalParameter){
+    public int getAdditionalParameter () {
+        return additionalParameter;
+    }
+
+    public Car (CarType carType, int carNumber, double carMileage, int additionalParameter) {
         this.additionalParameter = additionalParameter;
-        setCarParameters(carType,carNumber,carMileage);
+        setCarParameters(carType, carNumber, carMileage);
     }
 
-    private void setCarParameters(CarType carType, int carNumber, double carMileage){
+    private void setCarParameters (CarType carType, int carNumber, double carMileage) {
         this.carType = carType;
         this.carNumber = carNumber;
         this.carMileage = carMileage;
-        switch (carType){
+        switch (carType) {
             case LIGHT:
                 fuelConsumption = FuelConsumption.LIGHT;
                 fuelType = FuelType.LIGHT;
@@ -40,56 +44,27 @@ public class Car implements Comparable<Car> {
     }
 
 
-    public CarType getCarType() {
+    public CarType getCarType () {
         return carType;
     }
 
-    public void setCarType(CarType carType) {
-        this.carType = carType;
-    }
-
-    public FuelConsumption getFuelConsumption() {
+    public FuelConsumption getFuelConsumption () {
         return fuelConsumption;
     }
 
-    public void setFuelConsumption(FuelConsumption fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
-
-    public FuelType getFuelType() {
+    public FuelType getFuelType () {
         return fuelType;
     }
 
-    public void setFuelType(FuelType fuelType) {
-        this.fuelType = fuelType;
-    }
-
-    public int getAdditionalParameter() {
-        return additionalParameter;
-    }
-
-    public void setAdditionalParameter(int additionalParameter) {
-        this.additionalParameter = additionalParameter;
-    }
-
-    public int getCarNumber() {
-        return carNumber;
-    }
-
-    public void setCarNumber(int carNumber) {
-        this.carNumber = carNumber;
-    }
-
-    public double getCarMileage() {
+    public double getCarMileage () {
         return carMileage;
     }
 
-    public void setCarMileage(double carMileage) {
-        this.carMileage = carMileage;
-    }
-
     @Override
-    public int compareTo(Car o) {
-        return carType.compareTo(o.carType);
+    public String toString () {
+        return "Тип авто: " + carType.codeCar
+                + "Номер авто:  " + carNumber
+                + "Пробег: " + carMileage
+                + "Допольнительный пармераметр" + additionalParameter;
     }
 }

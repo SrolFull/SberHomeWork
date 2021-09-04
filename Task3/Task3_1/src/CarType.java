@@ -6,17 +6,22 @@ public enum CarType {
 
     int codeCar;
 
-    CarType(int codeCar){
+    CarType (int codeCar) {
         this.codeCar = codeCar;
     }
 
-    public static CarType tryParse(String codeCar){
-        switch (codeCar){
-            case "100": return LIGHT;
-            case "200": return CARGO;
-            case "300": return HEAVY_PASSANGER;
-            case "400": return  HEAVY_CRANE;
-            default: throw new IllegalArgumentException("Неверный тип авто");
+    public static CarType tryParse (String codeCar) {
+        switch (codeCar) {
+            case "100":
+                return LIGHT;
+            case "200":
+                return CARGO;
+            case "300":
+                return HEAVY_PASSANGER;
+            case "400":
+                return HEAVY_CRANE;
+            default:
+                throw new IllegalArgumentException("Неверный тип авто");
         }
     }
 }

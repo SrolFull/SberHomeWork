@@ -6,8 +6,8 @@ public enum FuelConsumption {
 
     double consumption;
 
-    FuelConsumption(double consumption){
-            this.consumption = consumption;
+    FuelConsumption (double consumption) {
+        this.consumption = consumption;
     }
 
 }

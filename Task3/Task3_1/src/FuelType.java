@@ -5,7 +5,7 @@ public enum FuelType {
 
     double cost;
 
-    FuelType(double cost){
+    FuelType (double cost) {
         this.cost = cost;
     }
 }
