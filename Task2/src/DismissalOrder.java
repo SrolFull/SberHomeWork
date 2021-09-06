@@ -1,8 +1,8 @@
 class DismissalOrder extends  AbstractDocument {
-    final String employee;
-    String orderText;
-    OrderStatus orderStatus;
-    String reason;
+    private final String employee;
+    private String orderText;
+    private OrderStatus orderStatus;
+    private String reason;
 
     DismissalOrder (int number, String employee, String orderText, String reason) {
         super(number, "Приказ об увольнение");
@@ -20,7 +20,7 @@ class DismissalOrder extends  AbstractDocument {
         super.Print(isSimplePrint);
         if (!isSimplePrint) System.out.println("Сотрудник: " + employee +
                                    "\n" + orderText +
-                                   "\nСтатус: " + orderStatus +
+                                   "\nСтатус: " + orderStatus.statusRu +
                                    "\nПричина увольнения: " + reason + "\n");
     }
 }

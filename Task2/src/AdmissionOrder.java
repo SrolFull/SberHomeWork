@@ -1,7 +1,7 @@
 class AdmissionOrder extends AbstractDocument {
-    final String employee;
-    String orderText;
-    OrderStatus orderStatus;
+    private final String employee;
+    private String orderText;
+    private OrderStatus orderStatus;
 
     AdmissionOrder (int number, String employee, String orderText) {
         super(number, "Приказ о приёме на работу");
@@ -18,7 +18,7 @@ class AdmissionOrder extends AbstractDocument {
         super.Print(isSimplePrint);
         if (!isSimplePrint) System.out.println("Сотрудник: " + employee +
                                    "\n" + orderText +
-                                   "\nСтатус: " + orderStatus + "\n");
+                                   "\nСтатус: " + orderStatus.statusRu + "\n");
     }
 
 }

@@ -1,6 +1,6 @@
 abstract class AbstractDocument {
-    final int number;
-    String name;
+    private final int number;
+    private String  name;
 
     AbstractDocument (int number, String name){
         this.number = number;
@@ -8,8 +8,8 @@ abstract class AbstractDocument {
     }
 
     void Print(boolean isSimplePrint){
-        System.out.print("Номер документа: " + number
-                                 + "\nИмя документа: " + name  + "\n\n");
+        System.out.print("\nНомер документа: " + number
+                                 + "\nИмя документа: " + name  + "\n");
     }
 
 }
