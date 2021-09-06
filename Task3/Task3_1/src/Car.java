@@ -1,4 +1,4 @@
-public class Car {
+class Car {
     private CarType carType;
     private FuelConsumption fuelConsumption;
     private FuelType fuelType;

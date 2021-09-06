@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GSMUtility {
+class GSMUtility {
     public static double CalcTotalFuelCost (List<Car> carList) {
         return carList.stream().
                 mapToDouble(GSMUtility::CalcFuelCost)

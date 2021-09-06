@@ -1,4 +1,4 @@
-public enum CarType {
+ enum CarType {
     LIGHT(100),
     CARGO(200),
     HEAVY_PASSANGER(300),

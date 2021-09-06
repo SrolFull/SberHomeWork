@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.stream.IntStream;
 
-public class Task32Main {
+class Task32Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine().toLowerCase();

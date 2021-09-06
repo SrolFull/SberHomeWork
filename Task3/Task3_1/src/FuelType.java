@@ -1,4 +1,4 @@
-public enum FuelType {
+enum FuelType {
     LIGHT(46.10),
     CARGO(47.50),
     HEAVY(48.90);

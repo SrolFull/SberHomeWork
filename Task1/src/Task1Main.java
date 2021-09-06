@@ -6,8 +6,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-
-public class Task1Main {
+class Task1Main {
     private static double[] CarsCostsByType = new double[4];
     public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);

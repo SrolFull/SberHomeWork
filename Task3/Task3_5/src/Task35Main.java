@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Task35Main {
+class Task35Main {
 
     public static void main(String[] args) {
         String[] inp = List.of("Ivan 5", "Petr 3", "Alex 10", "Petr 8", "Ivan 6", "Alex 5", "Ivan 1", "Petr 5", "Alex 1").toArray(new String[0]);

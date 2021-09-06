@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class GSMParser {
+class GSMParser {
     public static List<Car> ParseRawGSMStringToList (String input) {
         return Pattern.compile("C(\\d+)_(\\d+)-(\\d+)-?(\\d+)?")
                 .matcher(input)

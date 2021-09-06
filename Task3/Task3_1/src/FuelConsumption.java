@@ -1,4 +1,4 @@
-public enum FuelConsumption {
+enum FuelConsumption {
     LIGHT(12.5),
     CARGO(12),
     HEAVY_PASSENGER(11.5),
