@@ -20,7 +20,32 @@ class DismissalOrder extends  AbstractDocument {
         super.Print(isSimplePrint);
         if (!isSimplePrint) System.out.println("Сотрудник: " + employee +
                                    "\n" + orderText +
-                                   "\nСтатус: " + orderStatus.statusRu +
+                                   "\nСтатус: " + orderStatus.labelRu +
                                    "\nПричина увольнения: " + reason + "\n");
+    }
+
+
+    public String getOrderText () {
+        return orderText;
+    }
+
+    public void setOrderText (String orderText) {
+        this.orderText = orderText;
+    }
+
+    public OrderStatus getOrderStatus () {
+        return orderStatus;
+    }
+
+    public void setOrderStatus (OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String getReason () {
+        return reason;
+    }
+
+    public void setReason (String reason) {
+        this.reason = reason;
     }
 }

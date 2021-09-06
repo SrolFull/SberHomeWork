@@ -13,4 +13,20 @@ class Letter extends AbstractDocument{
         if (!isSimplePrint) System.out.println("От: " + from
                             + "\nКому: " + to + "\n");
     }
+
+    public String getFrom () {
+        return from;
+    }
+
+    public void setFrom (String from) {
+        this.from = from;
+    }
+
+    public String getTo () {
+        return to;
+    }
+
+    public void setTo (String to) {
+        this.to = to;
+    }
 }

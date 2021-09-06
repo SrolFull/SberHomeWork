@@ -18,7 +18,22 @@ class AdmissionOrder extends AbstractDocument {
         super.Print(isSimplePrint);
         if (!isSimplePrint) System.out.println("Сотрудник: " + employee +
                                    "\n" + orderText +
-                                   "\nСтатус: " + orderStatus.statusRu + "\n");
+                                   "\nСтатус: " + orderStatus.labelRu + "\n");
     }
 
+    public String getOrderText () {
+        return orderText;
+    }
+
+    public void setOrderText (String orderText) {
+        this.orderText = orderText;
+    }
+
+    public OrderStatus getOrderStatus () {
+        return orderStatus;
+    }
+
+    public void setOrderStatus (OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 }

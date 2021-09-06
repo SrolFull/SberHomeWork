@@ -2,9 +2,9 @@ enum OrderStatus {
     CREATED("Создано"),
     COMPLETED("Выполнено");
 
-    public final String statusRu;
+    public final String labelRu;
 
-    OrderStatus(String statusRu){
-        this.statusRu = statusRu;
+    OrderStatus(String labelRu){
+        this.labelRu = labelRu;
     }
 }
